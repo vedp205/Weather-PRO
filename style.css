@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    height: 98.5vh;
+    width: 99.3vw;
+    border: 4px solid black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Name_inpute{
+    height: 5vh;
+    width:  15vw;
+}
