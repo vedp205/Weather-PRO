@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab switcher</title>
+<style>
+body{
+    background-color: bisque;
+    margin: 30px;
+    height: 100vh;
+}
+.tabcontainer{
+    width: 80%;
+    height: 30%;
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+input[type='radio']{
+    display: none;
+}
+.tab-label{
+    width: 40%;
+    padding: 5px 10px;
+    
+    background-color: rgb(255, 171, 62);
+    font-family: 'Franklin Gothic Medium';
+    border: 2px solid black;
+    cursor: pointer;
+}
+input[type='radio']:checked+.tab-label{
+    background-color: rgb(255, 182, 57);
+    border: 2px solid black;
+}
+.tab-context{
+    display: none;
+    padding: 20px;
+}
+#tab-1:checked~#cont-1,
+#tab-2:checked~#cont-2,
+#tab-3:checked~#cont-3{
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div class="tabcontainer">
+        
+        <input type="radio" name="tab" id="tab-1" checked>
+        <label for="tab-1"class="tab-label">Tab 1</label>
+
+        <input type="radio" name="tab" id="tab-2">
+        <label for="tab-2"class="tab-label">Tab 2</label>
+
+        <input type="radio" name="tab" id="tab-3">
+        <label for="tab-3"class="tab-label">Tab 3</label>
+
+        <div class="tab-context" id="cont-1"><h2>T1</h2><p>THIS IS TAB-1 </p></div>
+
+
+        <div class="tab-context" id="cont-2"><h2>T2</h2><p>THIS IS TAB-2 </p></div>
+
+
+        <div class="tab-context" id="cont-3"><h2>T3</h2><p>THIS IS TAB-3 </p></div>
+    </div>
+</body>
+
+</html>
